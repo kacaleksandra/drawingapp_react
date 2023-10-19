@@ -2,26 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #01143f;
+}
+.container {
+  width: 100%;
+  gap: 15px;
+  padding: 10px;
+}
+section {
+  background: #fff;
+  border-radius: 15px;
+}
+.tools-board {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  width: 80vw;
+  margin-bottom: 10px;
+}
+.tools-board .row {
+  margin: 5px;
+}
+.row .options {
+  list-style: none;
+  margin: 10px;
+}
+.row .options .option {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.option :where(span, label) {
+  color: #5a6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.option #fill-color {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.option #size-slider {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.colors .options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.colors .option {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+
+.colors .option:nth-child(5) {
+  background-color: #4a98f7;
+}
+.colors .option.selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 15px;
+  width: 15px;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+
+.option #color-picker {
+  opacity: 0;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buttons button {
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.buttons .clear-canvas {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.buttons .save-img {
+  background: #4a98f7;
+  border: 1px solid #4a98f7;
+}
+
+.drawing-board canvas {
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
 }
