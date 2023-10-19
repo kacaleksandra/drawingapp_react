@@ -15,8 +15,8 @@ export function drawLine(
       const y = e.nativeEvent.offsetY;
 
       ctx.beginPath();
-      ctx.moveTo(prevX, prevY); // Przesunięcie na poprzednią pozycję
-      ctx.lineTo(x, y); // Rysowanie linii do aktualnej pozycji
+      ctx.moveTo(prevX, prevY);
+      ctx.lineTo(x, y);
 
       if (fillColor) {
         ctx.stroke();

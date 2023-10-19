@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
-import { drawRect } from "@/fuctions/drawRect";
-import { drawTriangle } from "@/fuctions/drawTriangle";
-import { drawCircle } from "@/fuctions/drawCircle";
-import { drawLine } from "@/fuctions/drawLine";
-import { saveFile } from "@/fuctions/saveFile";
+import { drawRect } from "@/functions/drawRect";
+import { drawTriangle } from "@/functions/drawTriangle";
+import { drawCircle } from "@/functions/drawCircle";
+import { drawLine } from "@/functions/drawLine";
+import { saveFile } from "@/functions/saveFile";
 import ToolOption from "@/components/ToolOption";
 import ColorOptions from "@/components/ColorOptions";
 
