@@ -10,7 +10,7 @@ interface ToolOptionProps {
 function ToolOption({ iconSrc, label, active, onClick }: ToolOptionProps) {
   return (
     <li className={`option tool ${active ? "active" : ""}`} onClick={onClick}>
-      <Image src={iconSrc} width="20" height="20" alt="" />
+      <Image unoptimized={true} src={iconSrc} width="20" height="20" alt="" />
       <span>{label}</span>
     </li>
   );

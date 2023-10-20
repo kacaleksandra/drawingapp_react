@@ -205,12 +205,6 @@ function DrawingApp() {
               active={selectedTool === "eraser"}
               onClick={() => handleToolClick("eraser")}
             />
-            <ToolOption
-              iconSrc="/lineChanger.svg"
-              label="Change line"
-              active={selectedTool === "lineChanger"}
-              onClick={() => handleToolClick("lineChanger")}
-            />
           </ul>
         </div>
 
